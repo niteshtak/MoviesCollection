@@ -6,10 +6,10 @@ target 'MoviesCollection' do
   use_frameworks!
 
   # Pods for MoviesCollection
-
-	pod 'Alamofire', '4.4.0'
+  	pod 'Alamofire', '4.7'
+	pod 'AlamofireImage', '~> 3.3'
 	pod 'MBProgressHUD', '~> 1.0.0'
-	pod 'AlamofireImage'
+	pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
 
   target 'MoviesCollectionTests' do
     inherit! :search_paths

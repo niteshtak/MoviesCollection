@@ -1,19 +1,22 @@
 PODS:
-  - Alamofire (4.4.0)
-  - AlamofireImage (3.2.0):
-    - Alamofire (~> 4.1)
+  - Alamofire (4.7.0)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
   - MBProgressHUD (1.0.0)
+  - UIScrollView-InfiniteScroll (1.0.2)
 
 DEPENDENCIES:
-  - Alamofire (= 4.4.0)
-  - AlamofireImage
+  - Alamofire (= 4.7)
+  - AlamofireImage (~> 3.3)
   - MBProgressHUD (~> 1.0.0)
+  - UIScrollView-InfiniteScroll (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  UIScrollView-InfiniteScroll: c132d6d5851daff229ab4a1060ccf70a05a051c9
 
-PODFILE CHECKSUM: a0d24665c3ab98e3ede5193e81cba33de769d740
+PODFILE CHECKSUM: 287e50ba36ad648a16e135bc90cf337b2b6454ed
 
 COCOAPODS: 1.4.0

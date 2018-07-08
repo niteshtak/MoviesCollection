@@ -6,10 +6,9 @@
 //  Copyright © 2018 nitesh. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 struct AppColors {
 	
-	
+	static let peachColor = UIColor(rgb: 0xFF4B86)
 }

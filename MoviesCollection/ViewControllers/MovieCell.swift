@@ -11,7 +11,7 @@ import UIKit
 class MovieCell: UITableViewCell {
 	
 	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var moviewPoster: UIImageView!
+	@IBOutlet weak var moviePoster: UIImageView!
 	@IBOutlet weak var releaseDateLabel: UILabel!
 	@IBOutlet weak var overviewLabel: UILabel!
 	@IBOutlet weak var parentView: UIView!
@@ -20,8 +20,8 @@ class MovieCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-		moviewPoster.clipsToBounds = true
-		moviewPoster.layer.cornerRadius = 5.0
+		moviePoster.clipsToBounds = true
+		moviePoster.layer.cornerRadius = 5.0
 		parentView.layer.cornerRadius = 5.0
     }
 

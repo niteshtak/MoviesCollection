@@ -19,6 +19,7 @@
 		A31679FF20F1F97600E51918 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31679FE20F1F97600E51918 /* AppFonts.swift */; };
 		A3167A0120F1F9BB00E51918 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3167A0020F1F9BB00E51918 /* Extensions.swift */; };
 		A394313D20F1EFEA00AE97B8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394313C20F1EFEA00AE97B8 /* Movie.swift */; };
+		A3A1DD0720F2520E002071E8 /* MovieDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A1DD0620F2520E002071E8 /* MovieDetailCell.swift */; };
 		A3E2B18920F1EBD1009312BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E2B18720F1EBD1009312BB /* Main.storyboard */; };
 		A3E2B18E20F1EBD2009312BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E2B18C20F1EBD2009312BB /* LaunchScreen.storyboard */; };
 		A3E2B19920F1EBD2009312BB /* MoviesCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2B19820F1EBD2009312BB /* MoviesCollectionTests.swift */; };
@@ -66,6 +67,7 @@
 		A31679FE20F1F97600E51918 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		A3167A0020F1F9BB00E51918 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A394313C20F1EFEA00AE97B8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A3A1DD0620F2520E002071E8 /* MovieDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCell.swift; sourceTree = "<group>"; };
 		A3E2B18020F1EBD1009312BB /* MoviesCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E2B18820F1EBD1009312BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3E2B18D20F1EBD2009312BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				A31679F520F1F50000E51918 /* MoviesListVC.swift */,
 				A31679F720F1F51F00E51918 /* MovieDetailVC.swift */,
 				A31679F920F1F54B00E51918 /* MovieCell.swift */,
+				A3A1DD0620F2520E002071E8 /* MovieDetailCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -506,12 +509,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -546,6 +551,7 @@
 				A394313D20F1EFEA00AE97B8 /* Movie.swift in Sources */,
 				A31679FD20F1F96D00E51918 /* AppColors.swift in Sources */,
 				A31679F820F1F51F00E51918 /* MovieDetailVC.swift in Sources */,
+				A3A1DD0720F2520E002071E8 /* MovieDetailCell.swift in Sources */,
 				A31679FF20F1F97600E51918 /* AppFonts.swift in Sources */,
 				A31679F220F1F14C00E51918 /* WebServicesAPI.swift in Sources */,
 				A31679F620F1F50000E51918 /* MoviesListVC.swift in Sources */,
@@ -729,7 +735,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = MoviesCollection/Main/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.MoviesCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -747,7 +756,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = MoviesCollection/Main/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.MoviesCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -764,7 +776,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = MoviesCollectionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.MoviesCollectionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -782,7 +798,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = MoviesCollectionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.MoviesCollectionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,7 +819,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = MoviesCollectionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.MoviesCollectionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -816,7 +840,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = MoviesCollectionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.MoviesCollectionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
