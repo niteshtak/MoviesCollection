@@ -30,6 +30,7 @@ public struct Constants {
 	public static let imageUrlPrefix = "https://image.tmdb.org/t/p/"
 	public static let releaseDatePath = "discover/movie?sort_by=release_date.desc"
 	public static let moviePath = "movie/"
+	public static let searchPath = "search/movie?api_key="
 	
 	static var byReleaseDate: String {
 		return APIUrlPrefix + releaseDatePath
@@ -37,6 +38,10 @@ public struct Constants {
 	
 	static var movieDetailPath: String {
 		return APIUrlPrefix + moviePath
+	}
+	
+	static var movieSearchPath: String {
+		return APIUrlPrefix + searchPath + APIKey
 	}
 	
 	public struct ServerKey {

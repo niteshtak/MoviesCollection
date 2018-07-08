@@ -9,6 +9,7 @@ target 'MoviesCollection' do
 
 	pod 'Alamofire', '4.4.0'
 	pod 'MBProgressHUD', '~> 1.0.0'
+	pod 'AlamofireImage', '~> 3.3'
 
   target 'MoviesCollectionTests' do
     inherit! :search_paths

@@ -1,5 +1,5 @@
 //
-//  MoviesListVC.swift
+//  AppColors.swift
 //  MoviesCollection
 //
 //  Created by Nitesh Tak on 7/8/18.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+struct AppColors {
+	
+	
+}
